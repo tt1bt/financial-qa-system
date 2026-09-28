@@ -36,7 +36,15 @@ def cmd_config() -> None:
         print("  python -m src.pipeline chat   # 命令行问答")
         print("  streamlit run app/streamlit_app.py   # 网页界面")
     else:
-        print(f"\n✗ 发现 {len(problems)} 个问题需要解决")
+        print(f"\n✗ 发现 {len(problems)} 个问题需要解决：\n")
+        for i, p in enumerate(problems, 1):
+            print(f"  {i}. {p}\n")
+        print("配置方法：")
+        print("  1. 复制 .env.example 为 .env")
+        print("     Windows:  copy .env.example .env")
+        print("     Linux/macOS:  cp .env.example .env")
+        print("  2. 编辑 .env，填入 LLM_API_KEY")
+        print("  3. 重新运行: python -m src.pipeline config")
         sys.exit(1)
 
 
