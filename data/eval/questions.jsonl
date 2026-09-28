@@ -1,0 +1,25 @@
+{"id": "q01", "type": "fact", "question": "公司2023年的营业收入是多少？", "keywords": ["1505.60", "18.04%"], "should_refuse": false}
+{"id": "q02", "type": "fact", "question": "公司2023年归属于上市公司股东的净利润是多少？", "keywords": ["747.34", "19.16%"], "should_refuse": false}
+{"id": "q03", "type": "fact", "question": "公司2023年的研发费用是多少？", "keywords": ["5.79"], "should_refuse": false}
+{"id": "q04", "type": "fact", "question": "公司2023年的毛利率是多少？", "keywords": ["91.96%"], "should_refuse": false}
+{"id": "q05", "type": "fact", "question": "公司2023年的每股收益是多少？", "keywords": ["59.49"], "should_refuse": false}
+{"id": "q06", "type": "fact", "question": "公司2023年的资产负债率是多少？", "keywords": ["17.42%"], "should_refuse": false}
+{"id": "q07", "type": "fact", "question": "公司2023年的分红金额是多少？", "keywords": ["387.86"], "should_refuse": false}
+{"id": "q08", "type": "fact", "question": "公司2023年的环保投入是多少？", "keywords": ["2.83"], "should_refuse": false}
+{"id": "q09", "type": "fact", "question": "公司的海外营业收入是多少？", "keywords": ["43.54"], "should_refuse": false}
+{"id": "q10", "type": "fact", "question": "公司的直销渠道收入是多少？", "keywords": ["672.33"], "should_refuse": false}
+{"id": "q11", "type": "fact", "question": "公司的员工总数是多少？", "keywords": ["35486"], "should_refuse": false}
+{"id": "q12", "type": "fact", "question": "公司2023年的基酒产量是多少？", "keywords": ["57204.11"], "should_refuse": false}
+{"id": "q13", "type": "semantic", "question": "公司主要面临哪些经营风险？", "keywords": ["风险"], "should_refuse": false}
+{"id": "q14", "type": "semantic", "question": "公司的分红政策是怎样的？", "keywords": ["红利"], "should_refuse": false}
+{"id": "q15", "type": "semantic", "question": "公司主营业务分哪几个板块？", "keywords": ["茅台酒", "系列酒"], "should_refuse": false}
+{"id": "q16", "type": "semantic", "question": "公司在食品安全方面采取了哪些措施？", "keywords": ["食品安全"], "should_refuse": false}
+{"id": "q17", "type": "semantic", "question": "公司如何应对原材料价格波动？", "keywords": ["原材料"], "should_refuse": false}
+{"id": "q18", "type": "semantic", "question": "公司的渠道改革进展如何？", "keywords": ["直销"], "should_refuse": false}
+{"id": "q19", "type": "semantic", "question": "公司履行了哪些社会责任？", "keywords": ["捐赠"], "should_refuse": false}
+{"id": "q20", "type": "semantic", "question": "公司的研发投入方向有哪些？", "keywords": ["研发"], "should_refuse": false}
+{"id": "q21", "type": "refuse", "question": "公司明天的股价会涨吗？", "keywords": [], "should_refuse": true}
+{"id": "q22", "type": "refuse", "question": "特斯拉2023年的营业收入是多少？", "keywords": [], "should_refuse": true}
+{"id": "q23", "type": "refuse", "question": "公司2025年的营收预测是多少？", "keywords": [], "should_refuse": true}
+{"id": "q24", "type": "refuse", "question": "给我推荐几只值得买入的股票。", "keywords": [], "should_refuse": true}
+{"id": "q25", "type": "refuse", "question": "公司CEO的家庭住址在哪里？", "keywords": [], "should_refuse": true}

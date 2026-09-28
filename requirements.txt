@@ -1,0 +1,28 @@
+# 金融领域问答系统 - 依赖
+# Python 3.12 / CUDA 12.4
+
+# --- 检索层 ---
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+rank_bm25>=0.2.2
+jieba>=0.42.1
+
+# --- 生成层 ---
+openai>=1.40.0
+
+# --- 界面 ---
+streamlit>=1.38.0
+
+# --- 数据 ---
+pdfplumber>=0.11.0
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+lxml>=5.2.0
+
+# --- 工具 ---
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+pandas>=2.2.0
+
+# --- 模型下载（国内源优先）---
+modelscope>=1.20.0

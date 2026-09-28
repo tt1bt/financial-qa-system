@@ -1,0 +1,503 @@
+{
+  "corpus_size": 15,
+  "n_questions": 24,
+  "summary": {
+    "vector": {
+      "n": 22,
+      "recall@1": 0.7727272727272727,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 0.8787878787878788,
+      "by_type": {
+        "fact": {
+          "n": 12,
+          "recall@1": 0.6666666666666666,
+          "mrr": 0.8333333333333334
+        },
+        "semantic": {
+          "n": 10,
+          "recall@1": 0.9,
+          "mrr": 0.9333333333333333
+        }
+      }
+    },
+    "bm25": {
+      "n": 22,
+      "recall@1": 0.8181818181818182,
+      "recall@3": 0.9090909090909091,
+      "recall@5": 1.0,
+      "mrr": 0.8863636363636364,
+      "by_type": {
+        "fact": {
+          "n": 12,
+          "recall@1": 0.8333333333333334,
+          "mrr": 0.8958333333333334
+        },
+        "semantic": {
+          "n": 10,
+          "recall@1": 0.8,
+          "mrr": 0.875
+        }
+      }
+    },
+    "hybrid": {
+      "n": 22,
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 1.0,
+      "by_type": {
+        "fact": {
+          "n": 12,
+          "recall@1": 1.0,
+          "mrr": 1.0
+        },
+        "semantic": {
+          "n": 10,
+          "recall@1": 1.0,
+          "mrr": 1.0
+        }
+      }
+    }
+  },
+  "details": {
+    "vector": [
+      {
+        "question": "公司2023年的营业收入是多少？",
+        "expect": "1505.60",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司2023年的净利润是多少？",
+        "expect": "747.34",
+        "type": "fact",
+        "rank": 2
+      },
+      {
+        "question": "公司的研发费用是多少？",
+        "expect": "5.79",
+        "type": "fact",
+        "rank": 2
+      },
+      {
+        "question": "公司的毛利率是多少？",
+        "expect": "91.96",
+        "type": "fact",
+        "rank": 2
+      },
+      {
+        "question": "公司的股东总数是多少？",
+        "expect": "168947",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的资产负债率是多少？",
+        "expect": "17.42",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司2023年的每股收益是多少？",
+        "expect": "59.49",
+        "type": "fact",
+        "rank": 2
+      },
+      {
+        "question": "公司的海外收入是多少？",
+        "expect": "43.54",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的直销渠道收入是多少？",
+        "expect": "672.33",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红金额是多少？",
+        "expect": "387.86",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的环保投入是多少？",
+        "expect": "2.83",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的员工总数是多少？",
+        "expect": "35486",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司主营业务分哪几个板块？",
+        "expect": "茅台酒",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司面临哪些经营风险？",
+        "expect": "风险",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红政策是怎样的？",
+        "expect": "红利",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司在食品安全方面有什么措施？",
+        "expect": "食品安全",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的毛利率变动原因是什么？",
+        "expect": "毛利率",
+        "type": "semantic",
+        "rank": 3
+      },
+      {
+        "question": "公司如何应对原材料价格波动？",
+        "expect": "原材料",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的渠道改革进展如何？",
+        "expect": "直销",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的产能情况如何？",
+        "expect": "基酒产量",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司履行了哪些社会责任？",
+        "expect": "捐赠",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的研发方向有哪些？",
+        "expect": "研发",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司明天的股价会涨吗？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      },
+      {
+        "question": "特斯拉2023年的营收是多少？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      }
+    ],
+    "bm25": [
+      {
+        "question": "公司2023年的营业收入是多少？",
+        "expect": "1505.60",
+        "type": "fact",
+        "rank": 4
+      },
+      {
+        "question": "公司2023年的净利润是多少？",
+        "expect": "747.34",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的研发费用是多少？",
+        "expect": "5.79",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的毛利率是多少？",
+        "expect": "91.96",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的股东总数是多少？",
+        "expect": "168947",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的资产负债率是多少？",
+        "expect": "17.42",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司2023年的每股收益是多少？",
+        "expect": "59.49",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的海外收入是多少？",
+        "expect": "43.54",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的直销渠道收入是多少？",
+        "expect": "672.33",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红金额是多少？",
+        "expect": "387.86",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的环保投入是多少？",
+        "expect": "2.83",
+        "type": "fact",
+        "rank": 2
+      },
+      {
+        "question": "公司的员工总数是多少？",
+        "expect": "35486",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司主营业务分哪几个板块？",
+        "expect": "茅台酒",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司面临哪些经营风险？",
+        "expect": "风险",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红政策是怎样的？",
+        "expect": "红利",
+        "type": "semantic",
+        "rank": 4
+      },
+      {
+        "question": "公司在食品安全方面有什么措施？",
+        "expect": "食品安全",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的毛利率变动原因是什么？",
+        "expect": "毛利率",
+        "type": "semantic",
+        "rank": 2
+      },
+      {
+        "question": "公司如何应对原材料价格波动？",
+        "expect": "原材料",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的渠道改革进展如何？",
+        "expect": "直销",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的产能情况如何？",
+        "expect": "基酒产量",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司履行了哪些社会责任？",
+        "expect": "捐赠",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的研发方向有哪些？",
+        "expect": "研发",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司明天的股价会涨吗？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      },
+      {
+        "question": "特斯拉2023年的营收是多少？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      }
+    ],
+    "hybrid": [
+      {
+        "question": "公司2023年的营业收入是多少？",
+        "expect": "1505.60",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司2023年的净利润是多少？",
+        "expect": "747.34",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的研发费用是多少？",
+        "expect": "5.79",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的毛利率是多少？",
+        "expect": "91.96",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的股东总数是多少？",
+        "expect": "168947",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的资产负债率是多少？",
+        "expect": "17.42",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司2023年的每股收益是多少？",
+        "expect": "59.49",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的海外收入是多少？",
+        "expect": "43.54",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的直销渠道收入是多少？",
+        "expect": "672.33",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红金额是多少？",
+        "expect": "387.86",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的环保投入是多少？",
+        "expect": "2.83",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司的员工总数是多少？",
+        "expect": "35486",
+        "type": "fact",
+        "rank": 1
+      },
+      {
+        "question": "公司主营业务分哪几个板块？",
+        "expect": "茅台酒",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司面临哪些经营风险？",
+        "expect": "风险",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的分红政策是怎样的？",
+        "expect": "红利",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司在食品安全方面有什么措施？",
+        "expect": "食品安全",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的毛利率变动原因是什么？",
+        "expect": "毛利率",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司如何应对原材料价格波动？",
+        "expect": "原材料",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的渠道改革进展如何？",
+        "expect": "直销",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的产能情况如何？",
+        "expect": "基酒产量",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司履行了哪些社会责任？",
+        "expect": "捐赠",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司的研发方向有哪些？",
+        "expect": "研发",
+        "type": "semantic",
+        "rank": 1
+      },
+      {
+        "question": "公司明天的股价会涨吗？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      },
+      {
+        "question": "特斯拉2023年的营收是多少？",
+        "expect": null,
+        "type": "refuse",
+        "rank": null
+      }
+    ]
+  }
+}

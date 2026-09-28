@@ -1,0 +1,522 @@
+{
+  "summary": {
+    "mode": "hybrid",
+    "top_k": 5,
+    "total": 25,
+    "correct": 25,
+    "accuracy": 1.0,
+    "by_type": {
+      "fact": {
+        "n": 12,
+        "correct": 12,
+        "acc": 1.0
+      },
+      "semantic": {
+        "n": 8,
+        "correct": 8,
+        "acc": 1.0
+      },
+      "refuse": {
+        "n": 5,
+        "correct": 5,
+        "acc": 1.0
+      }
+    },
+    "refuse_accuracy": 1.0,
+    "citation_rate": 0.8
+  },
+  "details": [
+    {
+      "id": "q01",
+      "type": "fact",
+      "question": "公司2023年的营业收入是多少？",
+      "answer": "公司2023年实现营业收入1505.60亿元，同比增长18.04% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.99,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "1505.60",
+          "18.04%"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q02",
+      "type": "fact",
+      "question": "公司2023年归属于上市公司股东的净利润是多少？",
+      "answer": "公司2023年归属于上市公司股东的净利润为747.34亿元，同比增长19.16% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 1.0,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "747.34",
+          "19.16%"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q03",
+      "type": "fact",
+      "question": "公司2023年的研发费用是多少？",
+      "answer": "公司2023年研发费用为5.79亿元，同比增长10.28%，占营业收入比例为0.38% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "5.79"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q04",
+      "type": "fact",
+      "question": "公司2023年的毛利率是多少？",
+      "answer": "公司2023年毛利率为91.96%，较上年提升0.22个百分点 [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.99,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "91.96%"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q05",
+      "type": "fact",
+      "question": "公司2023年的每股收益是多少？",
+      "answer": "公司2023年基本每股收益为59.49元，同比增长18.04% [1]；稀释每股收益为59.49元 [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "59.49"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q06",
+      "type": "fact",
+      "question": "公司2023年的资产负债率是多少？",
+      "answer": "公司2023年资产负债率为17.42%，处于行业较低水平 [1][3]。",
+      "citations": [
+        "1",
+        "3"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "17.42%"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q07",
+      "type": "fact",
+      "question": "公司2023年的分红金额是多少？",
+      "answer": "公司2023年度利润分配方案已经2024年5月召开的2023年年度股东大会审议通过，并于2024年6月实施完毕，共计派发现金红利387.86亿元 [1]。公司经本次董事会审议通过的利润分配预案为：以总股本1256197800股为基数，向全体股东每10股派发现金红利308.76元（含税），合计派发现金红利387.86亿元 [2]。",
+      "citations": [
+        "1",
+        "2"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "387.86"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q08",
+      "type": "fact",
+      "question": "公司2023年的环保投入是多少？",
+      "answer": "公司2023年环保投入为2.83亿元，同比增长8.43% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "2.83"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q09",
+      "type": "fact",
+      "question": "公司的海外营业收入是多少？",
+      "answer": "公司海外市场实现营业收入43.54亿元，同比增长2.64% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "43.54"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q10",
+      "type": "fact",
+      "question": "公司的直销渠道收入是多少？",
+      "answer": "直销渠道实现营业收入672.33亿元，同比增长36.16% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "672.33"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q11",
+      "type": "fact",
+      "question": "公司的员工总数是多少？",
+      "answer": "公司员工总数为35486人，其中生产人员24859人，技术人员4632人 [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.99,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "35486"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q12",
+      "type": "fact",
+      "question": "公司2023年的基酒产量是多少？",
+      "answer": "公司2023年茅台酒基酒产量为57204.11吨，同比增长0.69% [1][2]；系列酒基酒产量为42961.28吨，同比增长22.44% [1]。",
+      "citations": [
+        "1",
+        "2"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "57204.11"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q13",
+      "type": "semantic",
+      "question": "公司主要面临哪些经营风险？",
+      "answer": "根据参考资料，公司主要面临以下经营风险：宏观经济风险，白酒行业与宏观经济发展水平、居民消费能力密切相关，若宏观经济增长放缓或居民消费意愿下降，可能导致白酒消费需求减少 [3]；行业竞争风险，白酒行业竞争日趋激烈，公司仍面临其他知名白酒企业的竞争压力 [4]；食品安全风险，若产品出现食品安全问题，将严重损害品牌声誉并可能导致重大经济损失 [5]；原材料价格波动风险，主要原材料高粱、小麦等价格受气候条件、种植面积、市场供求等因素影响，若大幅上涨将增加生产成本 [1]；政策法规风险，白酒行业受国家产业政策、税收政策、环保政策等多方面监管，若相关政策发生重大调整，可能对公司生产经营产生影响 [2]；环境保护风险，若环保标准提高或发生环保事故，可能增加环保投入或导致停产整顿 [2]。",
+      "citations": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "风险"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q14",
+      "type": "semantic",
+      "question": "公司的分红政策是怎样的？",
+      "answer": "公司经本次董事会审议通过的利润分配预案为：以总股本1256197800股为基数，向全体股东每10股派发现金红利308.76元（含税），合计派发现金红利387.86亿元。本年度不进行资本公积金转增股本，不送红股 [1]。公司2023年度利润分配方案已经2024年5月召开的2023年年度股东大会审议通过，并于2024年6月实施完毕，共计派发现金红利387.86亿元 [2]。",
+      "citations": [
+        "1",
+        "2"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "红利"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q15",
+      "type": "semantic",
+      "question": "公司主营业务分哪几个板块？",
+      "answer": "公司主营业务分为茅台酒和系列酒两大板块 [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "茅台酒",
+          "系列酒"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q16",
+      "type": "semantic",
+      "question": "公司在食品安全方面采取了哪些措施？",
+      "answer": "食品质量安全是白酒企业的生命线，若公司产品出现食品安全问题，将严重损害品牌声誉并可能导致重大经济损失 [1]。公司建立了覆盖原料采购、生产酿造、储存运输全过程的食品安全管控体系，确保产品质量安全 [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.98,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "食品安全"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q17",
+      "type": "semantic",
+      "question": "公司如何应对原材料价格波动？",
+      "answer": "公司主要原材料包括高粱、小麦等农产品，其价格受气候条件、种植面积、市场供求等因素影响。若原材料价格大幅上涨，将增加公司生产成本。公司通过与主要产区签订长期采购协议来平抑价格波动。[1]",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "原材料"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q18",
+      "type": "semantic",
+      "question": "公司的渠道改革进展如何？",
+      "answer": "公司持续推进渠道改革，直销收入占比由上年度的38.99%提升至45.67% [1]。分渠道看，直销渠道实现营业收入672.33亿元，同比增长36.16%；批发代理渠道实现营业收入799.86亿元，同比增长7.52% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "直销"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q19",
+      "type": "semantic",
+      "question": "公司履行了哪些社会责任？",
+      "answer": "公司积极履行社会责任，主要体现在以下几个方面：在公益捐赠方面，报告期内公司公益捐赠支出为1.56亿元，主要投向乡村振兴、教育助学、救灾救济等领域，并持续开展希望工程圆梦行动，累计资助贫困学生超过20万名 [1]。在生态保护方面，公司持续开展赤水河流域生态保护工作，全年投入生态保护资金1.24亿元，实施赤水河上游水土保持项目，累计治理水土流失面积达156平方公里 [1]。在员工权益保障方面，公司员工总数为35486人，其中生产人员24859人，技术人员4632人，公司依法为全体员工缴纳五险一金，员工劳动合同签订率100% [1]。",
+      "citations": [
+        "1"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "捐赠"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q20",
+      "type": "semantic",
+      "question": "公司的研发投入方向有哪些？",
+      "answer": "公司持续加大在酿造工艺、微生物研究、智能化生产等领域的研发投入 [1][2]。",
+      "citations": [
+        "1",
+        "2"
+      ],
+      "refused": false,
+      "confidence": 0.95,
+      "verdict": {
+        "correct": true,
+        "refused": false,
+        "hit_keywords": [
+          "研发"
+        ],
+        "miss_keywords": [],
+        "reason": "关键词全部命中"
+      }
+    },
+    {
+      "id": "q21",
+      "type": "refuse",
+      "question": "公司明天的股价会涨吗？",
+      "answer": "参考资料中未包含股价预测相关信息，无法回答该问题。本系统仅基于已披露的财务报告内容作答。",
+      "citations": [],
+      "refused": true,
+      "confidence": 0.0,
+      "verdict": {
+        "correct": true,
+        "refused": true,
+        "hit_keywords": [],
+        "miss_keywords": [],
+        "reason": "正确拒答"
+      }
+    },
+    {
+      "id": "q22",
+      "type": "refuse",
+      "question": "特斯拉2023年的营业收入是多少？",
+      "answer": "参考资料仅包含贵州茅台2023年度报告的相关内容，未包含特斯拉的任何信息，无法回答该问题。",
+      "citations": [],
+      "refused": true,
+      "confidence": 0.0,
+      "verdict": {
+        "correct": true,
+        "refused": true,
+        "hit_keywords": [],
+        "miss_keywords": [],
+        "reason": "正确拒答"
+      }
+    },
+    {
+      "id": "q23",
+      "type": "refuse",
+      "question": "公司2025年的营收预测是多少？",
+      "answer": "参考资料中仅包含2023年度报告数据，未包含2025年营收预测相关信息，无法回答该问题。",
+      "citations": [],
+      "refused": true,
+      "confidence": 0.0,
+      "verdict": {
+        "correct": true,
+        "refused": true,
+        "hit_keywords": [],
+        "miss_keywords": [],
+        "reason": "正确拒答"
+      }
+    },
+    {
+      "id": "q24",
+      "type": "refuse",
+      "question": "给我推荐几只值得买入的股票。",
+      "answer": "参考资料中未包含任何股票推荐相关信息，无法回答该问题。本系统仅基于上市公司已披露的财务报告内容作答，不提供投资建议。",
+      "citations": [],
+      "refused": true,
+      "confidence": 0.0,
+      "verdict": {
+        "correct": true,
+        "refused": true,
+        "hit_keywords": [],
+        "miss_keywords": [],
+        "reason": "正确拒答"
+      }
+    },
+    {
+      "id": "q25",
+      "type": "refuse",
+      "question": "公司CEO的家庭住址在哪里？",
+      "answer": "参考资料中未包含公司CEO家庭住址的相关信息，无法回答该问题。本系统仅基于已披露的年度报告内容作答。",
+      "citations": [],
+      "refused": true,
+      "confidence": 0.0,
+      "verdict": {
+        "correct": true,
+        "refused": true,
+        "hit_keywords": [],
+        "miss_keywords": [],
+        "reason": "正确拒答"
+      }
+    }
+  ]
+}

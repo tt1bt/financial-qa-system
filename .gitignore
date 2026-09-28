@@ -1,0 +1,112 @@
+# ============================================================
+#  金融问答系统 - Git 忽略规则
+# ============================================================
+
+# --- 环境与密钥（务必忽略，防止 Key 泄露）---
+.env
+.env.local
+.env.*.local
+*.key
+secrets.yaml
+
+# --- 模型权重（4.3GB，用 tools/download_models.py 获取）---
+models/
+*.safetensors
+*.safetensors.index.json
+*.bin
+*.pt
+*.onnx
+*.msgpack
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib60/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- 虚拟环境 ---
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# --- 测试与覆盖率 ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# --- 类型检查与格式化 ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+.Rproj.user
+
+# --- 操作系统 ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- 项目运行产物（临时）---
+data/eval/preview/
+data/eval/report_check.json
+data/eval/*_tmp.*
+tests/_tmp_*
+*.log
+logs/
+
+# --- 开发工具产生的目录 ---
+.dsh-meow/
+.dsh/
+.claude/
+.cursor/
+
+# --- 临时导出的 PDF（DOCX 源文件需要提交）---
+data/eval/report_preview.pdf
+
+# --- 注意 ---
+# 以下内容【需要】提交到仓库，供他人 clone 后直接运行：
+#   index/chroma/        已建好的向量索引（0.4MB）
+#   index/bm25.pkl       BM25 关键词索引
+#   data/chunks.jsonl    分块结果
+#   data/raw/*.txt       示例语料
+#   data/eval/*.json     实验数据
+#   data/eval/figures/   实验图表
