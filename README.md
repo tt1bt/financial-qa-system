@@ -48,19 +48,77 @@
 
 ### 环境要求
 
-- Python 3.10+
-- 显存 ≥ 6GB（仅需 CPU 也能运行，速度较慢）
-- 磁盘空间 ≥ 5GB（用于模型权重）
+| 配置 | 启动时间 | 单次问答检索 | 体验 |
+|---|---|---|---|
+| GPU 6GB+ | 约 11 秒 | 0.4 秒 | 流畅 |
+| CPU 8 核 | 约 10 秒 | 2.7 秒 | 可用 |
+| CPU 低压 U | 约 20 秒 | 5-8 秒 | 较慢 |
 
-### 1. 克隆并安装依赖
+- **Python 3.10+**（必需）
+- **内存 3GB+**（实测峰值 2.2GB）
+- **磁盘 6GB+**（模型约 4.3GB）
+- **GPU 非必需**，CPU 也能完整运行
+
+> **低配机器建议**：在 `.env` 中设置 `ENABLE_RERANK=0`，
+> 单次检索可从 2.7 秒降至 0.5 秒，准确率从 100% 降至 96%。
+> 重排模型占检索耗时的 94%，是性价比最高的取舍点。
+
+### 一条命令完成安装
 
 ```bash
 git clone https://github.com/tt1bt/financial-qa-system.git
 cd financial-qa-system
+python setup.py
+```
+
+`setup.py` 会自动完成：
+
+1. 检查 Python 版本、磁盘空间、GPU 情况
+2. 安装缺失的依赖（可选清华镜像加速）
+3. 下载模型（ModelScope 国内源，约 4.3GB，支持断点续传）
+4. 生成 `.env` 配置文件
+5. 校验整体配置并给出下一步指引
+
+装完后编辑 `.env` 填入 API Key，再启动：
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+> **提示**：项目已包含预建索引和示例语料，clone 后无需重新建索引。
+> **换机器或想检查状态**：`python setup.py --check`（只检查，不安装任何东西）。
+> **网络慢想分步做**：`python setup.py --skip-models`，之后再单独下载。
+
+### 只检查环境状态
+
+```bash
+python setup.py --check
+```
+
+输出示例：
+
+```
+[1/5] 环境检查
+  ✓ Python 3.12.13
+  ✓ 磁盘空间充足（剩余 255.2GB）
+  ✓ GPU 可用: NVIDIA GeForce RTX 3070 Ti Laptop GPU (8.0GB)
+  ✓ 嵌入模型: 已就绪  (D:\hf_cache\bge-m3)
+  ✓ 重排模型: 已就绪  (D:\hf_cache\bge-reranker-v2-m3)
+  ✓ 检索索引已就绪（372 KB）
+  ✓ 语料分块已就绪（15 个片段）
+```
+
+---
+
+### 手动安装（如需分步执行）
+
+#### 1. 安装依赖
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. 下载模型（约 4.3GB）
+#### 2. 下载模型（约 4.3GB）
 
 ```bash
 python tools/download_models.py
@@ -69,7 +127,7 @@ python tools/download_models.py
 使用 ModelScope 国内源，速度远快于 HuggingFace。默认下载到项目内 `models/` 目录。
 下载失败可直接重跑，支持断点续传。
 
-### 3. 配置 API Key
+#### 3. 配置 API Key
 
 ```bash
 # Linux / macOS
@@ -139,6 +197,7 @@ python -m src.pipeline build
 
 ```
 financial-qa-system/
+├── setup.py            一键安装脚本（推荐入口）
 ├── src/
 │   ├── config.py       全局配置 + 配置校验
 │   ├── schema.py       数据结构（Chunk / Answer）—— 模块间契约
@@ -245,13 +304,24 @@ python tools/gen_figures.py       # 生成图表
 
 ## 常见问题
 
-**Q: 显存不够怎么办？**
+**Q: 显存不够或没有 GPU 怎么办？**
 
-在 `.env` 中设置 `ENABLE_RERANK=0` 跳过重排模型，可节省约 2GB 显存。系统会退化为纯混合检索，准确率略降但功能完整。
+在 `.env` 中设置 `ENABLE_RERANK=0` 跳过重排模型。实测数据（Ryzen 7 6800H 纯 CPU）：
+
+| 配置 | 单次检索耗时 |
+|---|---|
+| 完整（含重排） | 2.7 秒 |
+| 关闭重排 | 0.5 秒 |
+
+重排模型占检索耗时的 94%，关闭后准确率从 100% 降至 96%，但内存占用降到 1GB 以内。
 
 **Q: 必须用 GPU 吗？**
 
-不必须。CPU 也能运行，但向量编码和重排会慢 10-20 倍。首次建索引在 CPU 上可能需要几分钟。
+不必须。CPU 能完整运行，实测内存峰值仅 2.2GB。GPU 的主要收益是启动更快（11 秒 vs 10 秒，差别不大），检索环节 GPU 约 0.4 秒、CPU 约 2.7 秒。
+
+**Q: 模型能不能不下载？**
+
+不能。查询编码必须用与建索引时相同的 embedding 模型——索引里的文档向量是离线算好的可随仓库分发，但**每个用户问题都要现场编码成向量**才能做相似度比较。这是向量检索的机制决定的，无法省略。
 
 **Q: 换 embedding 模型后检索结果很怪？**
 
@@ -259,7 +329,11 @@ python tools/gen_figures.py       # 生成图表
 
 **Q: 别人 clone 后需要重新建索引吗？**
 
-不需要。仓库已包含预建索引（`index/`）和分块结果（`data/chunks.jsonl`）。但**模型权重需要自行下载**，因为体积过大未纳入版本控制。
+不需要。仓库已包含预建索引（`index/`，仅 372KB）和分块结果（`data/chunks.jsonl`）。但**模型权重需要自行下载**，因为体积过大未纳入版本控制——运行 `python setup.py` 会自动处理。
+
+**Q: Python 环境已经装过一些依赖，会冲突吗？**
+
+`setup.py` 只安装缺失的包，已存在的会跳过。也可以先运行 `python setup.py --check` 查看当前状态，再决定装什么。
 
 **Q: 支持多公司检索吗？**
 
